@@ -45,7 +45,11 @@ body {
 
 }
 
-.backgroundnavbar  span a {
+.coba{
+	color:#c7f8fa;
+}
+
+.backgroundnavbar span a {
 	color:#0b3731;
 }
 
@@ -100,12 +104,13 @@ body {
 	background-color: #4bb6ac;
 }
 
-.triangle{
+/* untuk tiap page html bikin class triangle baru, ini khusus schedule.html*/
+.trianglesche{
 	position: fixed;
 }
 
-.triangle img {
-	margin-top: 380px;
+.trianglesche img {
+	margin-top: 305px;
 	margin-left: -43px;
 	width: 50px;
 }
