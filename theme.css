@@ -181,9 +181,6 @@ body {
 }
 
 /*SEARCH*/
-.search-header{
-	width: 100%;
-}
 
 .filter{
 	width: 100%;
@@ -199,4 +196,14 @@ input[type=text]{
 
 #myList{
 	width: 100px;
+}
+
+.trianglesearch{
+	position: fixed;
+}
+
+.trianglesearch img {
+	margin-top: 450px;
+	margin-left: -43px;
+	width: 50px;
 }
