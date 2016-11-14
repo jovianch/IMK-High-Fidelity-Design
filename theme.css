@@ -64,6 +64,7 @@ body {
 .bar{
 	position: fixed;
 	width: 100%;
+	z-index:-1;
 }
 
 .menutitle{
@@ -124,6 +125,7 @@ body {
 	text-align: right;
 	margin-bottom: 10px;
 }
+
 table{
 	border-color: #00252c;
 }
@@ -140,4 +142,57 @@ table{
 
 .calendar{
 	margin-top:5px;
+}
+
+/*Dashboard*/
+
+.triangledash{
+	position: fixed;
+}
+
+.triangledash img {
+	margin-top: 160px;
+	margin-left: -43px;
+	width: 50px;
+}
+
+.dashtable{
+	margin-left:3%;
+	padding-top: 1%;
+	width:94%;
+	
+}
+
+.dashdetail{
+	width:900px;
+	height:650px;
+	margin-top: 100px;
+	background-color: #4bb6ac;
+}
+
+.curs{
+	cursor:pointer;
+}
+
+.finalback{
+	 background-color:#3fc3cc; 
+	 margin-left:10%; 
+	 margin-right:10%;
+	 font-family: Berlin Sans FB;
+	 font-size:14px; 
+	 padding-left:3%; 
+	 padding-top:2%;
+	 padding-right:3%;
+	 padding-bottom:2%;
+}
+
+.finalback: hover{
+	background-color:black;
+}
+
+.contentDsn{
+	margin-left: 10%;
+	position: inherit;
+	display:inline-block;
+	width: 75%;
 }
