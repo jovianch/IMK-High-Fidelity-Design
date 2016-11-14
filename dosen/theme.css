@@ -128,14 +128,43 @@ table{
 	border-color: #00252c;
 }
 
-.callbutton img {
-	margin-bottom:-10px;
-}
-
 .title{
 	margin-left: 60px;
 	padding-top: 1px;
+}
 
+.edit{
+	position: absolute;
+	width: 779px;
+	height: 205px;
+	margin-left:376px;
+	margin-top: 416px;
+	background-color: #c7f8fa;
+}
+
+.col1{
+	position: absolute;
+overflow: hidden;
+width: 20%;
+height: 165px;
+border-right: 2px solid;
+padding-right: 10px;
+}
+
+.col2 {
+	font-size: 20px;
+}
+
+.col21{
+	position: absolute;
+margin-left: 270px;
+margin-top: 12px;
+}
+
+.col22{
+	position: absolute;
+margin-left: 500px;
+margin-top: 12px;
 }
 
 .calendar{
