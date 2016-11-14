@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('table tr').click(function(){
+			window.location = $(this).data('href');
+			return false;
+		});
+	});
+	</script>
+	<style>
+	table {
+    border-collapse: collapse;
+    width: 100%;
+	border: 0;
+	}
+	td, th {
+    text-align: left;
+    padding: 8px;
+	}
+	tr:nth-child(even) {
+    background-color: #99ff66;
+	}
+	tr:nth-child(odd) {
+	background: #33cc33;
+	}
+	table tr[data-href] {
+    cursor: pointer;
+	}
+	</style>
+	</head>
+		<body>
+		
+					<table>
+					  <tr>
+						<th>From</th>
+						<th>Subject</th>
+					  </tr>
+					  <tr data-href="schedule.html">
+						<td><span style="color:blue">Jovian Christanto</span></td>
+						<td><span style="color:blue">Konsultasi Tugas Akhir</span></td>
+					  </tr>
+					  <tr>
+						<td>Richard Wellianto</td>
+						<td>Perubahan Jadwal Bimbingan</td>
+					  </tr>
+					  <tr>
+						<td>Joshua Salimin</td>
+						<td>Ucapan Terima Kasih</td>
+					  </tr>
+					  <tr>
+						<td>Sashi Novitasari</td>
+						<td>Permasalahan Teknis dengan Perusahaan</td>
+					  </tr>
+					  <tr>
+						<td>Atika Azzahra</td>
+						<td>Perihal Jadwal Sidang Tugas Akhir</td>
+					  </tr>
+					  </h2>
+					</table>
+		</body>
+</html>
