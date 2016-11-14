@@ -58,13 +58,16 @@
 				<div class="detail">
 				<h1 align="center"><b>SEARCH<b></h1>
 				<form>
-					<input id="search" name="search" type="text">
+					<div class = "search-header">
+					<input id="search" name="search" type="text" style="display:inline-block;">
 					<input class="search-btn" name="submit" type="submit" value=" SEARCH "><br>
+					</div>
 
 					<input type="radio" name="file" value="file">File<br>
 					<a href= "searchNama.html"><input type="radio" name="mhs" value="mhs"></a>Dosen/Mahasiswa<br>
 
-					<select id = "myList">
+					<div class = "filter">
+					<select id = "myList" style="width:25%; display:inline-block;>
 					               <option value = "1">.doc</option>
 					               <option value = "2">.pdf</option>
 					               <option value = "3">.xlx</option>
@@ -74,21 +77,23 @@
 					               <option value = "7">.php</option>
 					               <option value = "8">.java</option>
 					</select>
-					<select id = "myList">
+					<select id = "myList" style="width:25%; display:inline-block;>
 					               <option value = "1">< 1 MB</option>
 					               <option value = "2">< 10 MB</option>
 					               <option value = "1">< 50 MB</option>
 					               <option value = "2">< 100 MB</option>
 					</select>
-					<select id = "myList">
+					<select id = "myList" style="width:25%; display:inline-block;>
 					               <option value = "1">11/11/2016</option>
 					               <option value = "2">12/11/2016</option>
 					               <option value = "3">13/11/2016</option>
 					               <option value = "4">14/11/2016</option>
 					</select>
 					<input class="search-btn" name="submit" type="submit" value=" FILTER "><br>
+					</div>
 
-					<select id = "myList">
+					<div class = "sort">
+					<select id = "myList" style="width:25%; align : right; : display:inline-block;>
 					               <option value = "1">A to Z</option>
 					               <option value = "2">Z to A</option>
 					               <option value = "3">Small to Large</option>
@@ -97,6 +102,8 @@
 					               <option value = "4">Old to New</option>
 					             </select>
 					<input class="search-btn" name="submit" type="submit" value=" SORT ">
+					</div>
+					<br>
 					</form>
 
 					<table>

@@ -179,3 +179,24 @@ body {
 	display:inline-block;
 	width: 75%;
 }
+
+/*SEARCH*/
+.search-header{
+	width: 100%;
+}
+
+.filter{
+	width: 100%;
+}
+
+.sort{
+	width: 100%;
+}
+
+input[type=text]{
+    width: 75%;
+}
+
+#myList{
+	width: 100px;
+}

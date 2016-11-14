@@ -59,8 +59,8 @@
 				<h1 align="center"><b>SEARCH<b></h1>
 				<form>
 					<div class = "search-header">
-						<div style = "width: 10%;"><input id="search" name="search" type="text"></div>
-						<div style = "width: 20%;"><input class="search-btn" name="submit" type="submit" value=" SEARCH "><br></div>
+						<input id="search" name="search" type="text" style="display:inline-block;">
+						<input class="search-btn" name="submit" type="submit" value=" SEARCH "><br>
 					</div>
 
 					<a href= "search.html"><input type="radio" name="file" value="file"></a>File<br>
@@ -68,15 +68,15 @@
 
 
 					<div class = "filter">
-					<select id = "myList">
+					<select id = "myList" style="width:25%; display:inline-block;>
 					               <option value = "1">Dosen</option>
 					               <option value = "2">Mahasiswa</option>
 					</select>
-					<select id = "myList">
+					<select id = "myList" style="width:25%;>
 					               <option value = "1">Offline</option>
 					               <option value = "2">Online</option>
 					</select>
-					<select id = "myList">
+					<select id = "myList" style="width:25%; display:inline-block;>
 					               <option value = "1">Basis Data</option>
 					               <option value = "2">Sistem Terdistribusi</option>
 					               <option value = "3">Rekayasa Perangkat Lunak</option>
@@ -86,13 +86,16 @@
 					<input class="search-btn" name="submit" type="submit" value=" FILTER "><br>
 					</div>
 
-					<select id = "myList">
+					<div class = "sort">
+					<select id = "myList" style="width:25%; align : right; : display:inline-block;>
 					               <option value = "1">A to Z</option>
 					               <option value = "2">Z to A</option>
 					               <option value = "3">Online to Offline</option>
 					               <option value = "4">Offline to Online</option>
-					             </select>
-					             <input class="search-btn" name="submit" type="submit" value=" SORT ">
+					</select>
+					<input class="search-btn" name="submit" type="submit" value=" SORT ">
+					</div>
+					<br>
 					</form>
 
 					<table>
