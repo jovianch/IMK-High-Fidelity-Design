@@ -14,13 +14,13 @@
 			</div>
 			<div class = "sidebar">
 				<div class = "navbar">
-					<div class="menutitle"><b>Menu</b></div>
-					<div class = "backgroundnavbar active" id="nav01"><img src="img/dashboard.png" style="line-height:30px;"><span><a href="">Dashboard</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav02"><img src="img/upload.png"><span><a href="">Upload</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav03"><img src="img/sche.png"><span><a href="/schedule.html">Schedule</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav04"><img src="img/message.png"><span><a href="">Message (0)</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav05"><img src="img/search.png"><span><a href="">Search</a></span><br></div>
-				</div>
+				<div class="menutitle"><b>Menu</b></div>
+				<div class = "backgroundnavbar active" id="nav01"><img src="img/dashboard.png" style="line-height:30px;"><span><a href="dashboardDsn.html">Dashboard</a></span><br></div>
+				<div class = "backgroundnavbar" id="nav02"><img src="img/list.png"><span><a href="daftar.html">Daftar</a></span><br></div>
+				<div class = "backgroundnavbar" id="nav03"><img src="img/sche.png"><span><a href="schedule.html">Schedule</a></span><br></div>
+				<div class = "backgroundnavbar" id="nav04"><img src="img/message.png"><span><a href="message.html">Message (0)</a></span><br></div>
+				<div class = "backgroundnavbar" id="nav05"><img src="img/search.png"><span><a href="search.html">Search</a></span><br></div>
+			</div>
 				<div class="message">
 					<img src="img/msgbutton.png" style="width:80px;">
 				</div>
@@ -31,20 +31,31 @@
 				<div class="dashdetail2">
 					<table class="dashtable" >
 						<tr >
-							<td style="padding-left:2%; padding-right:2%; padding-top:1%; padding-bottom:1%; background-color:#ac273e">
+							<td style="padding-left:2%; padding-right:2%; padding-top:1%; padding-bottom:1%; background-color:#3a3f64">
 								
 								<div style="font-size:21px; color:#e7cfd6; background-color:#31344c; font-family:Berlin Sans FB; padding-left:2%; padding-top:1%;  padding-bottom:1%">
 									Analisa Faktor-Faktor Yang Mempengaruhi Perataan Laba Pada Perusahaan Industri Manufaktur Di Indonesia
 								</div><b>
 								<table style="font-size:13px; color: white; padding-left:2%; margin-top:1%">
 									<tr>
-										<td>Tanggal Mulai</td><td>: 20 November 2016</td>
+										<td>Nama</td><td>: Annalisa</td>
 									</tr>
 									<tr>
-										<td>Dosen Pembimbing 1</td><td>: Dr. Mirsha Hasanudin</td>
+										<td>NIM</td><td>: 12355122</td>
 									</tr>
 									<tr>
-										<td>Dosen Pembimbing 2</td><td>: Dr. Jacky Ardjie</td>
+										<td>Program Studi</td><td>: Manajemen</td>
+									</tr>
+									<tr>
+										<td>Tanggal Mulai</td><td>: 20 November 2016</td></b>
+									</tr>
+									<tr>
+										<td>
+										<br>
+											<form action="dashboardDsn5.html" method="POST">
+											<button type="" style="background-color:#02a6cb; font-family:Berlin Sans FB; border: 3px solid white; border-radius: 8px; color: white">Check Repository</button>
+											</form>
+										</td></b>
 									</tr>
 								</table>
 								
@@ -67,9 +78,9 @@
 												<td style="width: 90%; float: left; padding-left:%; border-color: white">
 													<div style="background-color:#a8133d; padding-left:5%; color:white"><b>Submission</b></div>
 													<div style="background-color:white; font-size: 13px; padding-top:4%; padding-left:4%; padding-right: 4%">
-														File: Bab 3-revised.docx
-														<br>Ukuran: 252.123 KB
-														<br>Tanggal: 24 Februari 2017
+														File: -
+														<br>Ukuran: -
+														<br>Tanggal: -
 														<br><br>
 														<br>
 												</td>
@@ -103,7 +114,7 @@
 							<div style="background-color:black; font-family: Berlin Sans FB; padding-left:5%; color:white;font-size:20px"><b>Data Final</b></div>
 							<br>
 							<div class="finalback">
-								<div id="is"><b><a href="">Bab 1: PENDAHULUAN</a></b></div>
+								<div id="is"><b>Bab 1: PENDAHULUAN</b></div>
 								<span style="font-size:13px">
 								<table>
 									<tr>
@@ -127,11 +138,11 @@
 									</tr>
 								</table>
 								<br>
-								<img src="img/dl.png" style="padding-left:1%; height: 20px">												
+								<a href=""><img src="img/dl.png" style="padding-left:1%; height: 20px"></a>											
 							</div>
 							<br>
 							<div class="finalback">
-								<div id="is"><b><a href="">Bab 2: TINJAUAN PUSTAKA</a></b></div>
+								<div id="is"><b>Bab 2: TINJAUAN PUSTAKA</b></div>
 								<span style="font-size:13px">
 								<table>
 									<tr>
@@ -155,12 +166,49 @@
 									</tr>
 								</table>
 								<br>
-								<img src="img/dl.png" style="padding-left:1%; height: 20px">												
+								<a href=""><img src="img/dl.png" style="padding-left:1%; height: 20px">												
 							</div>				
 							</table>
 						</td>
 					</table>
 				</div>
 			</div>
+			<script type="text/javascript">
+			function EditBack(){
+				$('#calbutton').attr('onclick','Edit()');
+				document.getElementById("edit").innerHTML ="";
+			}
+
+			function Message(){
+				document.getElementById("message").innerHTML =
+				"<div class=\"msgbox\">"+
+				"<div style=\"background-color: black;font-size:26px; color:#e7d1db;padding-left:4%; padding-right: 10px; padding-bottom: 5px; text-align: right;\">"+
+							"<span onclick=\"MessageBack()\"><b>x</b></span>"+
+				"</div>"+
+				"<div class=\"colmsg1\">"+
+					"<form>"+
+						"<b><span style=\"padding-right: 46px;\">To</span>: <input type=\"text\" name=\"to\"><br>"+
+						"Subject : <input type=\"text\" name=\"subject\" value=\"\"><br>"+
+					"<input type=\"submit\" name=\"sendmsg\" value=\"SEND\" onclick=\"MessageSent()\"></b>"+
+					"</form>"+
+				"</div>"+
+				"<div class=\"colmsg2\">"+
+					"<textarea rows=\"6\" cols=\"120\"></textarea>"+
+						"</div>"+
+				"</div>";
+			}
+
+			function MessageBack(){
+				document.getElementById("message").innerHTML ="";
+			}
+
+			function MessageSent(){
+				alert("Message was sent to Dosen Pembimbing");
+				MessageBack();
+			}
+		</script>
+		<div id="message">
+			
+		</div>
 		</body>
 </html>

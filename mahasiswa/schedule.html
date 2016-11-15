@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+		<body>
+		<div class="bar">
+			<div class ="topbar">
+				<div class="logo"><img src="img/icon.png" style="margin-bottom: -5px; margin-top: 15px;"></div>
+				<div class="user"><span style="color:#c7f8fa;">Hello, <b>user!</b></span><br><span style=""><a href="" style="color:#e74955;text-decoration: none;">logout</a></span></div>
+			</div>
+			<div class = "sidebar">
+				<div class = "navbar">
+					<div class="menutitle"><b>Menu</b></div>
+					<div class = "backgroundnavbar" id="nav01"><img src="img/dashboard.png" style="line-height:30px;"><span><a href="dashboardMhs.html">Dashboard</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav02"><img src="img/upload.png"><span><a href="upload.html">Upload</a></span><br></div>
+					<div class = "backgroundnavbar active" id="nav03"><img src="img/sche.png"><span><a href="schedule.html">Schedule</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav04"><img src="img/message.png"><span><a href="message.html">Message (0)</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav05"><img src="img/search.png"><span><a href="search.html">Search</a></span><br></div>
+				</div>
+				<div class="message">
+					<img src="img/msgbutton.png" style="width:80px;">
+				</div>
+			</div>
+		</div>
+			<div class = "content" id="content">
+				<div class="trianglesche"><img src="img/tri.png"></div>
+				<div class="detail">
+				<div style="background-color: black;font-size:26px; color:#e7d1db;padding-left:4%; padding-top :1%">
+						<b>JADWAL AVAILABLE DOSEN PEMBIMBING</b>
+					</div>
+					<br>
+				<span style="margin-left: 60px;"><b>Januari 2016</b></span>
+				<center><div class="calendar">
+					<TABLE BORDER=1 CELLSPACING=1 CELLPADDING=40> 
+					<TR BGCOLOR="#096070"> 
+						<TD ALIGN=center>Sun</TD>
+						<TD ALIGN=center>Mon</TD>
+						<TD ALIGN=center>Tue</TD>
+						<TD ALIGN=center>Wed</TD>
+						<TD ALIGN=center>Thu</TD>
+						<TD ALIGN=center>Fri</TD>
+						<TD ALIGN=center>Sat</TD>
+					</TR>
+					<TR> 
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center>1</TD>
+					</TR>
+					<TR> 
+						<TD ALIGN=center>2</TD>
+						<TD ALIGN=center>3</TD>
+						<TD ALIGN=center>4</TD>
+						<TD BGCOLOR="#f48a94" ALIGN=center>5</TD>
+						<TD ALIGN=center>6</TD>
+						<TD ALIGN=center>7</TD>
+						<TD ALIGN=center>8</TD>
+					</TR>
+					<TR> 
+						<TD ALIGN=center>9</TD>
+						<TD ALIGN=center>10</TD>
+						<TD ALIGN=center>11</TD>
+						<TD BGCOLOR="#f48a94" ALIGN=center>12</TD>
+						<TD ALIGN=center>13</TD>
+						<TD BGCOLOR="#f48a94" ALIGN=center>14</TD>
+						<TD ALIGN=center>15</TD>
+					</TR>
+					<TR> 
+						<TD ALIGN=center>16</TD>
+						<TD BGCOLOR="#f48a94"ALIGN=center>17</TD>
+						<TD ALIGN=center>18</TD>
+						<TD ALIGN=center>19</TD>
+						<TD ALIGN=center>20</TD>
+						<TD ALIGN=center>21</TD>
+						<TD ALIGN=center>22</TD>
+					</TR>
+					<TR> 
+						<TD ALIGN=center>23</TD>
+						<TD ALIGN=center>24</TD>
+						<TD ALIGN=center>25</TD>
+						<TD BGCOLOR="#f48a94" ALIGN=center>26</TD>
+						<TD BGCOLOR="#f48a94" ALIGN=center>27</TD>
+						<TD BGCOLOR="#f48a94" ALIGN=center>28</TD>
+						<TD ALIGN=center>29</TD>
+					</TR>
+					<TR> 
+						<TD ALIGN=center>30</TD>
+						<TD ALIGN=center>31</TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+						<TD ALIGN=center></TD>
+					</TR>
+					</TABLE></center>
+				</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+			function EditBack(){
+				$('#calbutton').attr('onclick','Edit()');
+				document.getElementById("edit").innerHTML ="";
+			}
+
+			function Message(){
+				document.getElementById("message").innerHTML =
+				"<div class=\"msgbox\">"+
+				"<div style=\"background-color: black;font-size:26px; color:#e7d1db;padding-left:4%; padding-right: 10px; padding-bottom: 5px; text-align: right;\">"+
+							"<span onclick=\"MessageBack()\"><b>x</b></span>"+
+				"</div>"+
+				"<div class=\"colmsg1\">"+
+					"<form>"+
+						"<b><span style=\"padding-right: 46px;\">To</span>: <input type=\"text\" name=\"to\"><br>"+
+						"Subject : <input type=\"text\" name=\"subject\" value=\"\"><br>"+
+					"<input type=\"submit\" name=\"sendmsg\" value=\"SEND\" onclick=\"MessageSent()\"></b>"+
+					"</form>"+
+				"</div>"+
+				"<div class=\"colmsg2\">"+
+					"<textarea rows=\"6\" cols=\"120\"></textarea>"+
+						"</div>"+
+				"</div>";
+			}
+
+			function MessageBack(){
+				document.getElementById("message").innerHTML ="";
+			}
+
+			function MessageSent(){
+				alert("Message was sent to Dosen Pembimbing");
+				MessageBack();
+			}
+		</script>
+		<div id="message">
+			
+		</div>
+		</body>
+</html>
