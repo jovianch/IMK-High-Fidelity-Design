@@ -157,17 +157,6 @@ body {
 	cursor:pointer;
 }
 
-.finalback{
-	 background-color:#3fc3cc; 
-	 margin-left:10%; 
-	 margin-right:10%;
-	 font-family: Berlin Sans FB;
-	 font-size:14px; 
-	 padding-left:3%; 
-	 padding-top:2%;
-	 padding-right:3%;
-	 padding-bottom:2%;
-}
 
 .finalback: hover{
 	background-color:black;
@@ -179,6 +168,17 @@ body {
 	display:inline-block;
 	width: 75%;
 }
+
+.dashdetail2{
+	width:900px;
+	height:1200px;
+	margin-top: 100px;
+	background-color: #4bb6ac;
+}
+
+a.five:link {color:black;text-decoration:none;}
+a.five:visited {color:black;text-decoration:none;}
+a.five:hover {text-decoration:underline;}
 
 /*SEARCH*/
 
