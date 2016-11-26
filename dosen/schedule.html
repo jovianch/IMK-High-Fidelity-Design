@@ -2,65 +2,38 @@
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="theme.css">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 		<body>
-		<!--<div class="edit">
-				<div style="margin:20px">
-					<div class="col1">
-						<b>Sunday, 1 Januari 2016</b><br><br>
-						Available <input type="checkbox" name="available" value="yes"><br>
-						<a>Hours</a><br>
-						<a>Appointment</a><br>
-					</div>
-					<div class="col2">
-						<center><div class="col21">
-							<input type="checkbox" name="available1" value="1">07.00-08.00<br>
-							<input type="checkbox" name="available2" value="2">08.00-09.00<br>
-							<input type="checkbox" name="available3" value="3">09.00-10.00<br>
-							<input type="checkbox" name="available4" value="4">10.00-11.00<br>
-							<input type="checkbox" name="availabl5e" value="5">11.00-12.00<br>
-						</div>
-						<div class="col22">
-							<input type="checkbox" name="available6" value="6">12.00-13.00<br>
-							<input type="checkbox" name="available7" value="7">13.00-14.00<br>
-							<input type="checkbox" name="available8" value="8">14.00-15.00<br>
-							<input type="checkbox" name="available9" value="9">15.00-16.00<br>
-							<input type="checkbox" name="available10" value="10">16.00-17.00<br>
-						</div>
-					</div>
-				</div>
-				</div>-->
+		<div id="edit"></div>
 		<div class="bar">
 			<div class ="topbar">
-				<div class="logo"><img src="../img/icon.png" style="margin-bottom: -5px; margin-top: 15px;"></div>
+				<div class="logo"><img src="img/icon.png" style="margin-bottom: -5px; margin-top: 15px;"></div>
 				<div class="user"><span style="color:#c7f8fa;">Hello, <b>user!</b></span><br><span style=""><a href="" style="color:#e74955;text-decoration: none;">logout</a></span></div>
 			</div>
 			<div class = "sidebar">
 				<div class = "navbar">
 					<div class="menutitle"><b>Menu</b></div>
-					<div class = "backgroundnavbar" id="nav01"><img src="../img/dashboard.png" style="line-height:30px;"><span><a href="DashboardDsn.html">Dashboard</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav02"><img src="../img/list.png"><span><a href="">Daftar</a></span><br></div>
-					<div class = "backgroundnavbar active" id="nav03"><img src="../img/sche.png"><span><a href="schedule.html">Schedule</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav04"><img src="../img/message.png"><span><a href="message.html">Message (0)</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav05"><img src="../img/search.png"><span><a href="">Search</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav01"><img src="img/dashboard.png" style="line-height:30px;"><span><a href="DashboardDsn.html">Dashboard</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav02"><img src="img/list.png"><span><a href="daftar.html">Daftar</a></span><br></div>
+					<div class = "backgroundnavbar active" id="nav03"><img src="img/sche.png"><span><a href="schedule.html">Schedule</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav04"><img src="img/message.png"><span><a href="message.html">Message (0)</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav05"><img src="img/search.png"><span><a href="search.html">Search</a></span><br></div>
 				</div>
-				<div class="message">
-					<img src="../img/msgbutton.png" style="width:80px;">
+				<div class="message" onclick="Message()">
+					<img name="msgbutton" src="img/msgbutton.png" style="width:80px;">
 				</div>
 			</div>
 		</div>
 		<div class = "content" id="content">
-			<div class="trianglesche"><img src="../img/tri.png"></div>
+			<div class="trianglesche"><img src="img/tri.png"></div>
 			<div class="detail">
 			<div style="background-color: black;font-size:26px; color:#e7d1db;padding-left:4%; padding-top :1%">
 						<b>JADWAL AVAILABLE DOSEN PEMBIMBING</b>
 					</div>
 					<br>
 			<span style="margin-left: 60px;"><b>Januari 2016</b></span>
-
 			<center><div class="calendar">
 				<TABLE BORDER=1 CELLSPACING=1 CELLPADDING=40> 
 				<TR BGCOLOR="#096070"> 
@@ -79,47 +52,47 @@
 					<TD ALIGN=center></TD>
 					<TD ALIGN=center></TD>
 					<TD ALIGN=center></TD>
-					<TD ALIGN=center valign="bottom"><span>1</span><img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center valign="bottom"><span>1</span><a id="calbutton" onclick="Edit()"><img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></a></TD>
 				</TR>
 				<TR> 
-					<TD ALIGN=center>2<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>3<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>4<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD BGCOLOR="#a74051" ALIGN=center>5<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>6<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>7<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>8<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>2<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>3<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>4<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD BGCOLOR="#a74051" ALIGN=center>5<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>6<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>7<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>8<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
 				</TR>
 				<TR> 
-					<TD ALIGN=center>9<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>10<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>11<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>9<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>10<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>11<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
 					<TD BGCOLOR="#a74051" ALIGN=center>12</TD>
-					<TD ALIGN=center>13<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>13<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
 					<TD BGCOLOR="#a74051" ALIGN=center>14</TD>
-					<TD ALIGN=center>15<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>15<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
 				</TR>
 				<TR> 
-					<TD ALIGN=center>16<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD BGCOLOR="#a74051"ALIGN=center>17<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>18<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>19<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>20<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>21<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>22<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>16<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD BGCOLOR="#a74051"ALIGN=center>17<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>18<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>19<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>20<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>21<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>22<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
 				</TR>
 				<TR> 
-					<TD ALIGN=center>23<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>24<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>25<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD BGCOLOR="#a74051" ALIGN=center>26<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD BGCOLOR="#a74051" ALIGN=center>27<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD BGCOLOR="#a74051" ALIGN=center>28<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>29<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>23<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>24<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>25<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD BGCOLOR="#a74051" ALIGN=center>26<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD BGCOLOR="#a74051" ALIGN=center>27<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD BGCOLOR="#a74051" ALIGN=center>28<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>29<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
 				</TR>
 				<TR> 
-					<TD ALIGN=center>30<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
-					<TD ALIGN=center>31<img class="calbutton" src="../img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>30<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
+					<TD ALIGN=center>31<img class="calbutton" src="img/edit.png" style="width:30px; margin-bottom: -35px; margin-right:-40px;"></TD>
 					<TD ALIGN=center></TD>
 					<TD ALIGN=center></TD>
 					<TD ALIGN=center></TD>
@@ -130,5 +103,72 @@
 			</div>
 			</div>
 		</div>
+		<div id="message">
+			
+		</div>
 		</body>
+		<script type="text/javascript">
+			function Edit(){
+					$('#calbutton').attr('onclick','EditBack()');
+					document.getElementById("edit").innerHTML =
+					"<div class=\"edit\">"+
+					"<div style=\"margin:20px\">"+
+					"<div class=\"col1\">"+
+						"<b>Sunday, 1 Januari 2016</b><br><br>"+
+						"Available <input type=\"checkbox\" name=\"available\" value=\"yes\"><br>"+
+						"<a>Hours</a><br>"+
+						"<a>Appointment</a><br>"+
+					"</div>"+
+					"<div class=\"col2\">"+
+						"<center><div class=\"col21\">"+
+							"<input type=\"checkbox\" name=\"available1\" value=\"1\">07.00-08.00<br>"+
+							"<input type=\"checkbox\" name=\"available2\" value=\"2\">08.00-09.00<br>"+
+							"<input type=\"checkbox\" name=\"available3\" value=\"3\">09.00-10.00<br>"+
+							"<input type=\"checkbox\" name=\"available4\" value=\"4\">10.00-11.00<br>"+
+							"<input type=\"checkbox\" name=\"available5\" value=\"5\">11.00-12.00<br>"+
+						"</div>"+
+						"<div class=\"col22\">"+
+							"<input type=\"checkbox\" name=\"available6\" value=\"6\">12.00-13.00<br>"+
+							"<input type=\"checkbox\" name=\"available7\" value=\"7\">13.00-14.00<br>"+
+							"<input type=\"checkbox\" name=\"available8\" value=\"8\">14.00-15.00<br>"+
+							"<input type=\"checkbox\" name=\"available9\" value=\"9\">15.00-16.00<br>"+
+							"<input type=\"checkbox\" name=\"available10\" value=\"10\">16.00-17.00<br>"+
+						"</div>"+
+					"</div>"+
+				"</div></div>";
+				}
+
+			function EditBack(){
+				$('#calbutton').attr('onclick','Edit()');
+				document.getElementById("edit").innerHTML ="";
+			}
+
+			function Message(){
+				document.getElementById("message").innerHTML =
+				"<div class=\"msgbox\">"+
+				"<div style=\"background-color: black;font-size:26px; color:#e7d1db;padding-left:4%; padding-right: 10px; padding-bottom: 5px; text-align: right;\">"+
+							"<span onclick=\"MessageBack()\"><b>x</b></span>"+
+				"</div>"+
+				"<div class=\"colmsg1\">"+
+					"<form>"+
+						"<b><span style=\"padding-right: 46px;\">To</span>: <input type=\"text\" name=\"to\"><br>"+
+						"Subject : <input type=\"text\" name=\"subject\" value=\"\"><br>"+
+					"<input type=\"submit\" name=\"sendmsg\" value=\"SEND\" onclick=\"MessageSent()\"></b>"+
+					"</form>"+
+				"</div>"+
+				"<div class=\"colmsg2\">"+
+					"<textarea rows=\"6\" cols=\"120\"></textarea>"+
+						"</div>"+
+				"</div>";
+			}
+
+			function MessageBack(){
+				document.getElementById("message").innerHTML ="";
+			}
+
+			function MessageSent(){
+				alert("Message was sent to Dosen Pembimbing");
+				MessageBack();
+			}
+		</script>
 </html>

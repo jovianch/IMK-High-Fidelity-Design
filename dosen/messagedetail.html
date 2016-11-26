@@ -16,7 +16,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-	font-size: 30px;
+    width: 100%;
 	}
 	table {
     border-collapse: collapse;
@@ -32,43 +32,82 @@
 		<body>
 		<div class="bar">
 			<div class ="topbar">
-				<div class="logo"><img src="../img/icon.png" style="margin-bottom: -5px; margin-top: 15px;"></div>
+				<div class="logo"><img src="img/icon.png" style="margin-bottom: -5px; margin-top: 15px;"></div>
 				<div class="user"><span style="color:#c7f8fa;">Hello, <b>user!</b></span><br><span style=""><a href="" style="color:#e74955;text-decoration: none;">logout</a></span></div>
 			</div>
 			<div class = "sidebar">
 				<div class = "navbar">
 					<div class="menutitle"><b>Menu</b></div>
-					<div class = "backgroundnavbar" id="nav01"><img src="../img/dashboard.png" style="line-height:30px;"><span><a href="DashboardDsn.html">Dashboard</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav02"><img src="../img/list.png"><span><a href="">Daftar</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav03"><img src="../img/sche.png"><span><a href="schedule.html">Schedule</a></span><br></div>
-					<div class = "backgroundnavbar active" id="nav04"><img src="../img/message.png"><span><a href="message.html">Message (0)</a></span><br></div>
-					<div class = "backgroundnavbar" id="nav05"><img src="../img/search.png"><span><a href="">Search</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav01"><img src="img/dashboard.png" style="line-height:30px;"><span><a href="DashboardDsn.html">Dashboard</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav02"><img src="img/list.png"><span><a href="daftar.html">Daftar</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav03"><img src="img/sche.png"><span><a href="schedule.html">Schedule</a></span><br></div>
+					<div class = "backgroundnavbar active" id="nav04"><img src="img/message.png"><span><a href="message.html">Message (0)</a></span><br></div>
+					<div class = "backgroundnavbar" id="nav05"><img src="img/search.png"><span><a href="search.html">Search</a></span><br></div>
 				</div>
-				<div class="message">
-					<img src="../img/msgbutton.png" style="width:80px;">
+				<div class="message" onclick="Message()">
+					<img name="msgbutton" src="img/msgbutton.png" style="width:80px;">
 				</div>
 			</div>
 		</div>
 			<div class = "content" id="content">
-				<div class="trianglesche"><img src="../img/tri.png"></div>
+				<div class="trianglemsg"><img src="img/tri.png"></div>
 				<div class="detail">
 					<div style="background-color: black;font-size:26px; color:#e7d1db;padding-left:4%; padding-top :1%">
 						<b>MESSAGE</b>
-					</div><h2>
+					</div>
+					<div class="msgdetail">
 					<table>
 						<tr>
-							<td><font color="black">From</font></td>
+							<td><b><font color="black">From</font></b></td>
 							<td><font color="black">Jovian Christanto</font></td>
 						<tr>
 							<td><font color="black">Subject</font></td>
 							<td><font color="black">Konsultasi Tugas Akhir</font></td>
 					</table>
 					<br>
-					<img src="../img/delete.png" height="50" width="50" style="float:right" hspace="60">
-					<img src="../img/reply.png" height="50" width="50" style="float:right" vspace="2" >
-					<a href="message.html"><img src="../img/back.png" height="50" width="50" style="float:left" hspace="20"></a>
+					<img src="img/delete.png" height="50" width="50" style="float:right; margin-left:10px; margin-bottom: 10px;">
+					<img src="img/reply.png" height="50" width="50" style="float:right; margin-left:10px; margin-bottom: 10px;" vspace="2" >
+					<a href="message.html"><img src="img/back.png" height="50" width="50" style="float:left; margin-bottom: 10px;"></a>
 					<textarea rows="15" cols="45">Selamat malam, saya Jovian Christanto mahasiswa bimbingan Bapak ingin melakukan konsultasi tugas akhir saya kepada bapak pada besok hari pukul 13.30. </textarea>
+					</div>
 				</div>
 			</div>
+			<script type="text/javascript">
+			function EditBack(){
+				$('#calbutton').attr('onclick','Edit()');
+				document.getElementById("edit").innerHTML ="";
+			}
+
+			function Message(){
+				document.getElementById("message").innerHTML =
+				"<div class=\"msgbox\">"+
+				"<div style=\"background-color: black;font-size:26px; color:#e7d1db;padding-left:4%; padding-right: 10px; padding-bottom: 5px; text-align: right;\">"+
+							"<span onclick=\"MessageBack()\"><b>x</b></span>"+
+				"</div>"+
+				"<div class=\"colmsg1\">"+
+					"<form>"+
+						"<b><span style=\"padding-right: 46px;\">To</span>: <input type=\"text\" name=\"to\"><br>"+
+						"Subject : <input type=\"text\" name=\"subject\" value=\"\"><br>"+
+					"<input type=\"submit\" name=\"sendmsg\" value=\"SEND\" onclick=\"MessageSent()\"></b>"+
+					"</form>"+
+				"</div>"+
+				"<div class=\"colmsg2\">"+
+					"<textarea rows=\"6\" cols=\"120\"></textarea>"+
+						"</div>"+
+				"</div>";
+			}
+
+			function MessageBack(){
+				document.getElementById("message").innerHTML ="";
+			}
+
+			function MessageSent(){
+				alert("Message was sent to Dosen Pembimbing");
+				MessageBack();
+			}
+		</script>
+		<div id="message">
+			
+		</div>
 		</body>
 </html>

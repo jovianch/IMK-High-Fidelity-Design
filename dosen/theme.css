@@ -4,23 +4,23 @@ body {
 }
 
 .sidebar{
-	/*position: fixed;*/
+	position: fixed;
 	background-color: #00373e;
 	width: 22%;
 	height: 1920px;
 	display:inline-block;
 	margin-left: -10px;
-	margin-top: 0px;
+	margin-top: 60px;
 	font-family: Berlin Sans FB Demi;
 }
 .space {
 	margin-top: 500px;
 }
 .content{
-	margin-left: 25%;
 	position: inherit;
-	display:inline-block;
-	width: 75%;
+	display: inline-block;
+	width: 70%;
+	margin-left: 25%;
 }
 .navbar {
 	margin-left: 20px;
@@ -57,13 +57,12 @@ body {
 }
 
 .topbar{
-	background-color:#00252c;
-	margin-left: -10px;
+	background-color: #00252c;
+	/* margin-left: -10px; */
 	margin-top: -20px;
-}
-.bar{
 	position: fixed;
 	width: 100%;
+	margin-left:-8px;
 }
 
 .menutitle{
@@ -98,9 +97,10 @@ body {
 
 .detail{
 	width:900px;
-	height:900px;
+	height:auto;
 	margin-top: 100px;
 	background-color: #4bb6ac;
+	padding-bottom: 25px;
 }
 
 /* untuk tiap page html bikin class triangle baru, ini khusus schedule.html*/
@@ -133,12 +133,21 @@ table{
 	padding-top: 1px;
 }
 
+.msgbox{
+	position: fixed;
+	bottom: 0;
+	margin-left: -8px;
+	width: 100%;
+	background-color: #1f8386;
+	height: 150px;
+}
+
 .edit{
 	position: absolute;
 	width: 779px;
 	height: 205px;
-	margin-left:376px;
-	margin-top: 416px;
+	margin-left: 376px;
+	margin-top: 393px;
 	background-color: #c7f8fa;
 }
 
@@ -210,17 +219,6 @@ margin-top: 12px;
 	cursor:pointer;
 }
 
-.finalback{
-	 background-color:#3fc3cc; 
-	 margin-left:10%; 
-	 margin-right:10%;
-	 font-family: Berlin Sans FB;
-	 font-size:14px; 
-	 padding-left:3%; 
-	 padding-top:2%;
-	 padding-right:3%;
-	 padding-bottom:2%;
-}
 
 .finalback: hover{
 	background-color:black;
@@ -231,4 +229,119 @@ margin-top: 12px;
 	position: inherit;
 	display:inline-block;
 	width: 75%;
+}
+
+.dashdetail2{
+	width:900px;
+	height:1200px;
+	margin-top: 100px;
+	background-color: #4bb6ac;
+}
+
+a.five:link {color:black;text-decoration:none;}
+a.five:visited {color:black;text-decoration:none;}
+a.five:hover {text-decoration:underline;}
+.colmsg2{
+	display: inline-block;
+	width: 70%;
+	float: right;
+	margin: 10px;
+}
+.colmsg1{
+	display: inline-block;
+	width: 26%;
+	margin-top:10px;
+	margin-left: 20px;
+}
+
+input[name=subject], input[name=to]{
+	width: 76%;
+}
+input[name=sendmsg]{
+	font-weight: bold;
+	border: none;
+	background-color: #4bb6ac;
+	font-size: 15px;
+	color: #FFFFFF;
+	margin-top: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5x;
+	padding-right: 5px;
+	width: 100%;
+}
+
+.msgdetail{
+	margin:25px;
+}
+
+/*SEARCH*/
+
+.filter{
+	width: 100%;
+}
+
+.sort{
+	width: 100%;
+}
+
+input[type=text]{
+    width: 75%;
+}
+
+#myList{
+	width: 100px;
+}
+
+.trianglesearch{
+	position: fixed;
+}
+
+.trianglesearch img {
+	margin-top: 450px;
+	margin-left: -43px;
+	width: 50px;
+}
+
+.triangledftr{
+	position: fixed;
+}
+
+.triangledftr img {
+	margin-top: 235px;
+	margin-left: -43px;
+	width: 50px;
+}
+
+.searchdetail{
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+input[name="add"]{
+	font-weight: bold;
+	border: none;
+	background-color: #fa6573;
+	font-size: 15px;
+	color: #FFFFFF;
+	margin-top: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5x;
+	padding-right: 5px;
+	width: 90%;
+}
+input[name="submit"]{
+	font-weight: bold;
+	border: none;
+	background-color: #fa6573;
+	font-size: 15px;
+	color: #FFFFFF;
+	margin-top: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5x;
+	padding-right: 5px;
+	width: 23%;
 }
